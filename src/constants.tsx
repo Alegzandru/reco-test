@@ -1,6 +1,6 @@
-import { AppDiscovery } from './pages/AppDiscovery/AppDiscovery';
-import { AppInventory } from './pages/AppInventory/AppInventory';
-import { Settings } from './pages/Settings/Settings';
+import { AppDiscovery } from './pages/AppDiscoveryPage/AppDiscoveryPage';
+import { AppInventory } from './pages/AppInventoryPage/AppInventoryPage';
+import { Settings } from './pages/SettingsPage/SettingsPage';
 
 export const ROUTES = [
   {
