@@ -10,6 +10,14 @@
     "preview": "vite preview",
     "prepare": "husky"
   },
+  "lint-staged": {
+    "**/*.{ts,tsx,js,jsx}": [
+      "eslint --max-warnings=0 --cache --fix"
+    ],
+    "**/*.{json,md,css,scss}": [
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "@chakra-ui/react": "^3.27.1",
     "@emotion/react": "^11.14.0",
