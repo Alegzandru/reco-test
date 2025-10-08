@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+echo "Running pre-push checks…"
+npm run typecheck || exit 1
+npm run lint || exit 1
