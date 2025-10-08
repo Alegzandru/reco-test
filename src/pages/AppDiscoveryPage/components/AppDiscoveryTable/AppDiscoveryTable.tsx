@@ -1,8 +1,14 @@
 import { Box, Flex, Table, Text } from '@chakra-ui/react';
 
+import { HeaderWithSorting } from './HeaderWithSorting';
 import type { AppDiscoveryTableProps } from './types';
 
-export const AppDiscoveryTable = ({ companies, isLoading }: AppDiscoveryTableProps) => {
+export const AppDiscoveryTable = ({
+  companies,
+  isLoading,
+  onSort,
+  sorting,
+}: AppDiscoveryTableProps) => {
   return (
     <Table.Root borderCollapse="separate" borderSpacing="0 0.625rem">
       <Table.Header position="sticky" top="0.625rem" zIndex={1}>
@@ -13,10 +19,20 @@ export const AppDiscoveryTable = ({ companies, isLoading }: AppDiscoveryTablePro
             borderBottom="1px solid #5B5B5B"
             bg="accent.dark"
           >
-            Name
+            <HeaderWithSorting
+              text="Name"
+              onSort={onSort}
+              sortingKey="appName"
+              currentSorting={sorting}
+            />
           </Table.ColumnHeader>
           <Table.ColumnHeader color="white" borderBottom="1px solid #5B5B5B" bg="accent.dark">
-            Category
+            <HeaderWithSorting
+              text="Category"
+              onSort={onSort}
+              sortingKey="category"
+              currentSorting={sorting}
+            />
           </Table.ColumnHeader>
           <Table.ColumnHeader
             borderBottom="1px solid #5B5B5B"
@@ -24,7 +40,7 @@ export const AppDiscoveryTable = ({ companies, isLoading }: AppDiscoveryTablePro
             borderTopEndRadius="sm"
             bg="accent.dark"
           >
-            Connection
+            <HeaderWithSorting text="Connection" onSort={onSort} currentSorting={sorting} />
           </Table.ColumnHeader>
         </Table.Row>
       </Table.Header>
