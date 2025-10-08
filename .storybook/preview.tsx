@@ -1,7 +1,8 @@
-import type { Preview } from '@storybook/react-vite';
 import { ChakraProvider } from '@chakra-ui/react';
-import { system } from '../src/theme/chakraTheme';
+import type { Preview } from '@storybook/react-vite';
 import React from 'react';
+
+import { system } from '../src/theme/chakraTheme';
 
 const withChakra = (Story: React.FC) => (
   <ChakraProvider value={system}>
