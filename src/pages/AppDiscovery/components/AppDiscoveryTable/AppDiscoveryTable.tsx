@@ -5,22 +5,24 @@ import type { AppDiscoveryTableProps } from './types';
 export const AppDiscoveryTable = ({ companies, isLoading }: AppDiscoveryTableProps) => {
   return (
     <Table.Root borderCollapse="separate" borderSpacing="0 0.625rem">
-      <Table.Header>
-        <Table.Row fontSize="xs" bg="accent.dark" borderTopRadius="sm">
+      <Table.Header position="sticky" top="0.625rem" zIndex={1}>
+        <Table.Row fontSize="xs" bg="surface.1" borderTopRadius="sm" style={{ marginTop: 0 }}>
           <Table.ColumnHeader
             color="white"
             borderTopStartRadius="sm"
             borderBottom="1px solid #5B5B5B"
+            bg="accent.dark"
           >
             Name
           </Table.ColumnHeader>
-          <Table.ColumnHeader color="white" borderBottom="1px solid #5B5B5B">
+          <Table.ColumnHeader color="white" borderBottom="1px solid #5B5B5B" bg="accent.dark">
             Category
           </Table.ColumnHeader>
           <Table.ColumnHeader
             borderBottom="1px solid #5B5B5B"
             color="white"
             borderTopEndRadius="sm"
+            bg="accent.dark"
           >
             Connection
           </Table.ColumnHeader>
